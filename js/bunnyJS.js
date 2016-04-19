@@ -1,4 +1,11 @@
 ﻿$(function () {
+    var doc_height = $(document).height();
+
+    var half = doc_height / 2;
+    $('.container').height(half);
+    $('.imgContainer').height(half);
+ 
+
     var htmlTOAppend = "";
     for (var i = 0; i < 16; i++) {
         htmlTOAppend += "<div class='droparea'  data-number=\"" + (i) + "\"  ></div>";
@@ -7,7 +14,7 @@
 
     htmlTOAppend = "";
     for (var i = 0; i < 16; i++) {
-        htmlTOAppend += ("<img src=\"images\\bunny " + (i) + ".gif\" />");
+        htmlTOAppend += ("<img src=\"images\\bunny " + (i) + ".gif\"  />");
     }
     $('.imgContainer').html(htmlTOAppend);
 
@@ -25,7 +32,7 @@
             imgnum = imgnum.replace(".gif", "");
             
                 if ($(this).attr("data-number") == imgnum) {
-                    $(this).addClass("yellow");
+                    $(this).addClass("yellow");                   
                     $(this).html("<img src=\"images\\bunny " + imgnum + ".gif\" />");
                     $(event.toElement).remove();
 
