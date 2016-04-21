@@ -1,7 +1,7 @@
 ﻿$(function () {
     var doc_height = window.innerHeight - 100;
 
-    var half = doc_height / 2;
+    var half = doc_height *0.55;
     $('.container').height(half);
     $('.imgContainer').height(half);
  
